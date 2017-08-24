@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="nice">
+    <ion-title>
+      转入
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content  class="background">
+  <ion-grid class="tip">
+    <ion-row>
+        <ion-col style="color:red">*现金参能量转入货款参能量,且现金参能量获得返利</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list no-padding class="margin_top">
+    <ion-item>
+      转出账户
+      <ion-note item-end>现金参能量</ion-note>
+    </ion-item>
+    <ion-item>
+      转入账户
+      <ion-note item-end>货款参能量</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list no-padding>
+    <ion-item>
+      <ion-label fixed style="color:black">转入金额</ion-label>
+      <ion-input type="tel" placeholder="请输入转入金额" [(ngModel)]="money" text-end>
+    </ion-input>
+      <ion-note item-end>元</ion-note>
+    </ion-item>
+  </ion-list>
+
+   <button ion-button [disabled]="isDisabled" (click)="isSure()" color="primary" block round class="button_margin">确认转入</button>
+
+</ion-content>

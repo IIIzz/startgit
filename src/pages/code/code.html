@@ -1,0 +1,59 @@
+<!--
+  Generated template for the CodePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="nice">
+    <ion-title>我的二维码</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content class="content">
+
+   <ion-grid class="gid" padding>
+     <ion-row>
+       <div align="center">
+      <ion-icon name="person" class="button-right" style="font-size: 40px;" *ngIf="!base64Image"></ion-icon>
+      <img [src]="base64Image" *ngIf="base64Image" class="button-right tpl" style="font-size: 40px;" />
+       </div>
+     </ion-row>
+     <div class="myxxx"></div>
+     <ion-row class="erer">
+         <ion-col (click)="linkto()" >
+           <div align="center">
+             <font size="5px" color="#90ee90">
+               <ion-icon  name="infinite" large class="link"></ion-icon>
+             </font>
+             <p>分享链接</p>
+           </div>
+         </ion-col>
+
+       <div class="myxxx"></div>
+       <ion-col (click)="er()">
+         <div align="center">
+           <font size="5px" color="#90ee90">
+            <img src="assets/img/二维码2.jpg">
+           </font>
+           <p class="erwei">二维码邀请</p>
+         </div>
+       </ion-col>
+     </ion-row>
+   </ion-grid>
+  <div class="myxxx"></div>
+
+  <ion-card>
+  <ion-grid class="gd">
+    <ion-row class="sm">
+      <div>
+        <p>邀请说明：<br>1.您可以通过邀请链接分享和二维码邀请的方式邀请您的好友注册成为天参密码的经销商。<br>2.好友注册后，您可以在我的——>分销伙伴下进行查看。<br>3.一旦审核通过，双方确定关系，将无法调整。</p>
+      </div>
+    </ion-row>
+  </ion-grid>
+  </ion-card>
+</ion-content>

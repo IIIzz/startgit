@@ -1,0 +1,112 @@
+<!--
+  Generated template for the TixianPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="nice">
+    <ion-title>申请提现</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content  class="backgroud">
+  <ion-grid class="tip">
+  <ion-row>
+    <ion-col style="color:red">*如果开户行信息有误请更改，否则会导致提现失败。</ion-col>
+  </ion-row>
+</ion-grid>
+<ion-list no-padding class="margin_top">
+<ion-item>
+      银行卡号
+      <ion-note item-end> {{user_bankcard_no}} </ion-note>
+</ion-item>
+ <ion-item>
+      开户银行
+      <ion-note item-end>  {{user_bank_name}} </ion-note>
+ </ion-item>
+ <ion-item>
+      开户银行地址
+      <ion-note item-end>  {{user_bank_address}} </ion-note>
+ </ion-item>
+ </ion-list>
+
+ <ion-list no-padding>
+   <ion-item>
+   <ion-label fixed style="color:black">提现金额</ion-label>
+   <ion-input type="tel" placeholder="请输入提现金额" [(ngModel)]="user_apply_money" text-end>
+  </ion-input>
+   <ion-note item-end>元</ion-note>
+   </ion-item>
+  <ion-item *ngIf="shouxufei == null">
+    手续费
+    <ion-note item-end> 0.00元</ion-note>
+  </ion-item>
+    <ion-item *ngIf="shouxufei != null">
+    手续费
+    <ion-note item-end>{{shouxufei}}元</ion-note>
+  </ion-item>
+  <ion-item *ngIf="shuifei == null">
+    税费
+    <ion-note item-end> 0.00元</ion-note>
+  </ion-item>
+  <ion-item *ngIf="shuifei != null">
+    税费
+    <ion-note item-end>{{shuifei}}元</ion-note>
+  </ion-item>
+ </ion-list>
+
+<button ion-button color="blue" class="button-left" clear (click)="feiyong()">费用说明</button>
+<button ion-button color="blue" class="button-right" clear (click)="guize()">查看规则</button>
+  <button ion-button [disabled]="isDisabled" (click)="tixian()" color="primary" block round class="button_margin">确认提现</button>
+ <!--button ion-button  (click)="tixian()" color="primary" block *ngIf="user_apply_money">确认提现</button-->
+  <!--ion-card>
+   <ion-card>
+        <ion-card-header>
+          银行卡号
+        </ion-card-header>
+        <ion-card-content>
+       {{user_bankcard_no}}
+        </ion-card-content>
+   </ion-card>
+   <ion-card>
+        <ion-card-header>
+          开户银行
+        </ion-card-header>
+        <ion-card-content>
+        {{user_bank_name}}
+        </ion-card-content>
+   </ion-card>
+   <ion-card>
+        <ion-card-header>
+          开户银行地址
+        </ion-card-header>
+        <ion-card-content>
+        {{user_bank_address}}
+        </ion-card-content>
+   </ion-card>
+   <ion-card>
+      <ion-item >
+        <ion-icon name="yen" item-start>
+          <h2>
+            请输入提现金额
+          </h2>
+        </ion-icon>
+        <ion-input  type="tel" [(ngModel)]="user_apply_money">
+        </ion-input>
+           <ion-note item-end>元</ion-note>
+      </ion-item>
+      <div padding>
+        <button ion-button full clear (click)="tixian()">确认提现</button>
+      </div>
+    </ion-card>
+</ion-card-->
+  <br>
+    <!--ion-item >
+     提现规则:<br>
+    1 默认提现账户为绑定的银行卡,<br>&ensp;如需提现至其他银行卡，请先修改银行卡信息。<br>
+    2 提现金额不得低于提现基础额度（100元）。<br>
+    3 提现交易操作时间为30天，请耐心等待。
+    </ion-item-->
+</ion-content>

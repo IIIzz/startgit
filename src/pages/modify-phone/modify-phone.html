@@ -1,0 +1,30 @@
+
+<ion-header>
+
+  <ion-navbar color="nice">
+    <ion-title>修改手机号</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding class="background">
+  <ion-list>
+   <ion-item>
+      <ion-label fixed style="color:black" >新手机号</ion-label> 
+      <ion-input type="tel" placeholder="请输入新手机号" [(ngModel)]="phone"></ion-input>
+    </ion-item> 
+     <ion-item>
+      <ion-label fixed style="color:black" >验证码</ion-label> 
+      <ion-input type="text" placeholder="请输入验证码" [(ngModel)]="verify_code"></ion-input>
+      <button ion-button item-end clear style="color:blueviolet" (click)="startTime('middle')" *ngIf="second == null">获取验证码</button>
+      <button ion-button item-end clear style="color:blueviolet" (click)="startTime('middle')" *ngIf="second == 0">重新获取验证码</button>
+      <button ion-button item-end clear style="color:blueviolet" *ngIf="second > 0">{{second}}s后可重发</button> 
+    </ion-item> 
+     <ion-item>
+      <ion-label fixed style="color:black" >登录密码</ion-label> 
+      <ion-input type="password" placeholder="请输入登录密码" [(ngModel)]="pwd_myinput"></ion-input>
+    </ion-item> 
+  </ion-list>
+<button ion-button block round (click)="modify_phone('middle')" class="button_margin">确认</button>
+</ion-content>

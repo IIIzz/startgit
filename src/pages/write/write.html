@@ -1,0 +1,24 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>产品信息</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <img src="{{curret_item.images.split(',')[0]}}">
+<ion-item>
+  <ion-label>
+    <div align="center">
+      <h2>价格:{{curret_item.current_price}}</h2>
+    </div>
+  </ion-label>
+
+</ion-item>
+
+
+  <div no-padding [innerHTML]="curret_item.item_introduction">
+  </div>
+
+</ion-content>
+

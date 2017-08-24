@@ -1,0 +1,84 @@
+<ion-header>
+
+  <ion-navbar color="nice">
+    <ion-title>礼包</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <!-- <ion-card *ngFor="let pack of packList">
+
+  <ion-item>
+    <h2>{{pack.gifts_name}}</h2>
+    <p></p>
+  </ion-item>
+
+  <img src="{{pack.gifts_images.split(',')[0]}}" class="cut">
+
+  <ion-card-content>
+    <p>{{pack.gifts_title}}</p>
+  </ion-card-content>
+  <ion-row>
+    <ion-col col-4>
+        <div>&emsp;￥ {{pack.gifts_price}}</div>
+    </ion-col>
+    <ion-col>
+        <div>库存: {{pack.gifts_stock}}</div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col (click)="libao_xiangqing(pack.gifts_id)">
+      <button ion-button icon-left clear small>
+        <ion-icon name="ios-undo"></ion-icon>
+        <div>详情</div>
+      </button>
+    </ion-col>
+    <ion-col (click)="libao_buy(pack)">
+      <button ion-button icon-left clear small>
+        <ion-icon name="md-cart"></ion-icon>
+        <div>购买</div>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-card> -->
+
+<div class="new-list-header">
+  <label>
+    <ion-icon name='heart'></ion-icon>
+    精选礼品
+  </label>
+</div>
+<div>
+  <div *ngFor="let pack of packList" class="item">
+    <div (click)="libao_xiangqing(pack)">
+      <img src="{{pack.gifts_images.split(',')[0]}}">
+    </div>
+    <div (click)="libao_xiangqing(pack)">
+        <label class="title">
+          【{{pack.gifts_name}}】
+          {{pack.gifts_title}}
+        </label>
+      </div>          
+      <div class="product-bottom" (click)="libao_xiangqing(pack)">
+        <label class="price">
+          ￥{{pack.gifts_price}}
+        </label>
+        <label class="stock">
+            库存:{{pack.gifts_stock}}
+        </label>
+      </div>
+      <!-- <div class="xiangqing">
+          <span (click)="libao_buy(pack)">
+            <button ion-button icon-left clear small>
+              <ion-icon name="md-cart"></ion-icon>
+              <div>购买</div>
+            </button>
+          </span>
+      </div> -->
+
+  </div>
+</div>
+
+</ion-content>

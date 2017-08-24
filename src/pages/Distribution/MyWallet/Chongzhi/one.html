@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="nice">
+    <ion-title>
+      充值
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content  class="background">
+  <ion-grid class="tip">
+    <ion-row>
+        <ion-col style="color:red">*充值有延迟，请耐心等待。</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list no-padding class="margin_top">
+    <ion-item>
+      电话号码
+      <ion-note item-end>{{phone}}</ion-note>
+    </ion-item>
+    <ion-list radio-group [(ngModel)]="chongzhi_zhanghu" *ngIf="!czInfo && !czgInfo">
+    <ion-item>
+        <ion-label>现金参能量</ion-label>
+        <ion-radio checked="true" value="xianjin"></ion-radio>
+    </ion-item>
+    <ion-item>
+        <ion-label>货款参能量</ion-label>
+        <ion-radio value="ghk"></ion-radio>
+    </ion-item>
+    </ion-list>
+    <ion-item *ngIf="czInfo">
+      充值账户
+      <ion-note item-end>现金参能量</ion-note>
+    </ion-item>
+    <ion-item *ngIf="czgInfo">
+      充值账户
+      <ion-note item-end>货款参能量</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list no-padding>
+    <ion-item>
+      <ion-label fixed style="color:black">充值金额</ion-label>
+      <ion-input type="tel" placeholder="充值一元起" [(ngModel)]="refill_money" text-end>
+    </ion-input>
+      <ion-note item-end>元</ion-note>
+    </ion-item>
+  </ion-list>
+
+   <button ion-button [disabled]="isDisabled" (click)="chongzhi()" color="primary" block round class="button_margin">确认充值</button>
+
+</ion-content>
+

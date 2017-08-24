@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar color="nice">
+    <ion-title>
+      交易记录
+    </ion-title>
+  </ion-navbar>
+
+  <!--ion-toolbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+      积分交易记录
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-toolbar-->
+</ion-header>
+
+
+<ion-content no-padding class="backgroud">
+   <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown"
+      pullingText="下拉刷新"
+      refreshingSpinner="circles"
+      refreshingText="刷新中..."></ion-refresher-content>
+  </ion-refresher>
+ <p  *ngIf = "flag" text-center>
+   <font size="5px" color="#b0c4de">
+     暂无交易记录
+   </font>
+
+</p>
+<ion-list>
+
+  <ion-item *ngFor="let item of recordList"  item-text-wrap>
+
+    <ion-row>
+            <ion-col *ngIf="item.category_code == 'b'" style="font-size:18px;color:black;">
+
+              现金参能量
+            </ion-col>
+            <ion-col *ngIf="item.category_code == 'g'" style="font-size:18px;color:black;">
+              货款参能量
+            </ion-col>
+            <ion-col *ngIf="item.category_code == 'p'" style="font-size:18px;color:black;">
+              学习参能量
+            </ion-col>
+      <ion-col *ngIf="item.category_code == 'rb'" style="font-size:18px;color:black;">
+        融宝快捷支付
+      </ion-col>
+
+        <ion-col *ngIf ="item.increase_or_decrease == 1" style="color:red;font-size:20px;margin-left:20px;" text-end>
+         + {{item.trade_money}}
+        </ion-col>
+         <ion-col *ngIf ="item.increase_or_decrease == 2" style="color:black;font-size:20px;margin-left:20px;" text-end>
+         - {{item.trade_money}}
+        </ion-col>
+    </ion-row>
+
+      <p text-wrap><font size="1px">{{item.created_at}}</font></p>
+      <p text-wrap><font size="1px">{{item.description.split(',')[1]}}</font></p>
+
+  </ion-item>
+</ion-list>
+
+</ion-content>

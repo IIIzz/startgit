@@ -1,0 +1,207 @@
+<ion-header>
+  <ion-navbar color="nice">
+    <ion-title>天参密码</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="all">
+  <ion-list>
+    <ion-slides  pager autoplay="2000" inititalSlide="0" loop="true"  class="s">
+      <ion-slide *ngFor="let s of slideData" >
+        <img src="{{s.image}}" class="tpp">
+      </ion-slide>
+    </ion-slides>
+
+    <ion-grid class="wd">
+      <ion-grid no-padding>
+
+      <!--<div class="myxxx"></div>-->
+      <!--<ion-row class="tuiguang">-->
+        <!--<div><font size="3px" color=#d3d3d3>推广中心</font> </div>-->
+      <!--</ion-row>-->
+        <ion-row>
+          <ion-item no-lines>
+            <div align="center">
+              <font size="3.5px" color="#FF6633" Cursive>公司介绍</font>
+            </div>
+          </ion-item>
+        </ion-row>
+        <ion-row  no-padding>
+          <ion-item class="jieshao" *ngIf="flag==0" text-wrap no-lines>&emsp;&emsp;<p (click)="up()" *ngIf="flag==0">&emsp;&ensp;环翠楼红参生物科技股份有限公司成立于2012年3月，总投资10亿元，是国内人参深加工制品的龙头企业......>>> </p>
+          <!--<ion-note item-end style="margin-top: 20px" ><font size="2px">展开</font> </ion-note>-->
+          </ion-item>
+
+        </ion-row>
+
+        <ion-row class="showdetail">
+          <!--<button ion-button (click)="up()" *ngIf="flag==0" clear style="margin-top:-45px"><ion-note>展开</ion-note></button>-->
+          <div *ngIf="flag==1">
+            <ion-item text-wrap no-lines style="margin-top: -8px">
+            <p style="color: #60646B">
+              &emsp;环翠楼红参生物科技股份有限公司成立于2012年3月，总投资10亿元，是国内人参深加工制品的龙头企业。<br>&emsp;2014年，公司与中国科学院联合成立“中国科学院红参研发中心”，是我国第一个“国字号”的红参研发中心。2016年7月14日，环翠楼红参（股票代码837474）在北京敲响了登陆新三板的钟声，成为国内的高丽红参第一股，同时也标志着环翠楼集团正式进入了资本市场。
+              公司以100%进口的高品质无污染天参为原料，利用国际领先技术，经过中外专家队伍潜心研究，终于破解了吃人参上火、见效慢、不方便的千古难题，研发出更适合国人体质和口味的天参密码系列产品，填补了国内外红参高端滋补品的市场空白。
+            </p>
+            </ion-item>
+            <button ion-button *ngIf="flag==1" (click)="down()" clear full class="btn"><ion-note>收起</ion-note></button>
+          </div>
+        </ion-row>
+        <div class="myxxx"></div>
+        <ion-row (click)="alert_huancui()" class="alert_huancui">
+          <!--<ion-item class="sw" no-lines> <font size="3.5px" color="#FF6633" class="serif">公司公告</font></ion-item>-->
+            <font size="1px" class="gonggao" color="#DAA520">*公告:&ensp; 环翠楼·天参，未来有望成为国内高滋市场的龙头产品。</font>
+
+        </ion-row>
+
+      <ion-row class="spsp">
+        <ion-col  (click)="videos()">
+          <ion-grid>
+            <ion-row>
+            <ion-col col-5>     <div align="center" >
+              <font size="6px" color="#ffab3d">
+                <ion-icon name="aperture" large></ion-icon>
+              </font>
+            </div>
+            </ion-col>
+     <ion-col>
+       <ion-grid>
+         <ion-row>
+           <ion-col class="sps">
+       <font size="4px" color="#FF6633"><h6>公司视频</h6></font>
+           </ion-col>
+         </ion-row>
+         <ion-row>
+           <ion-col class="more">
+           <p>查看更多</p>
+           </ion-col>
+         </ion-row>
+       </ion-grid>
+     </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+
+        <ion-col >
+          <ion-grid>
+            <ion-row>
+              <ion-col col-5 (click)="article()">
+              <div align="center">
+            <font size="6px" color="#87ceeb">
+              <ion-icon name="book" large></ion-icon>
+            </font>
+          </div>
+        </ion-col>
+              <ion-col (click)="article()">
+                <ion-grid >
+                  <ion-row>
+                    <ion-col class="sps" >
+                      <font size="4px" color="#FF6633"><h6>公司文章</h6></font>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row >
+                    <ion-col class="more">
+                      <p>查看更多</p>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+
+
+        <ion-row class="star">
+          <ion-col  (click)="qidai('middle')" >
+            <ion-grid>
+              <ion-row>
+                <ion-col col-5>     <div align="center" >
+                  <font size="6px" color="#90ee90">
+                    <ion-icon name="ribbon" large></ion-icon>
+                  </font>
+                </div>
+                </ion-col>
+                <ion-col>
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col class="sps">
+                        <font size="4px" color="#FF6633"><h6>天参大明星</h6></font>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col class="more">
+                        <p>查看更多</p>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-col>
+
+          <ion-col  (click)="qidai('middle')" >
+            <ion-grid>
+              <ion-row>
+                <ion-col col-5>
+                  <div align="center">
+                    <font size="6px" color="#ffa07a">
+                      <ion-icon name="thumbs-up" large></ion-icon>
+                    </font>
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col class="sps">
+                        <font size="4px" color="#FF6633"><h6>顶级科研团队</h6></font>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col class="more">
+                        <p>查看更多</p>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-col>
+        </ion-row>
+
+
+
+        <ion-row class="star">
+          <ion-col col-6 (click)="qidai('middle')">
+            <ion-grid>
+              <ion-row>
+                <ion-col col-5>
+                  <div align="center">
+                    <font size="6px" color="#7cfc00">
+                      <ion-icon name="globe" large></ion-icon>
+                    </font>
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col class="sps">
+                        <font size="4px" color="#FF6633"><h6>学术纵横</h6></font>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col class="more">
+                        <p>查看更多</p>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+</ion-grid>
+  </ion-list>
+</ion-content>

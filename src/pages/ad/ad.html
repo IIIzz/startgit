@@ -1,0 +1,46 @@
+
+<ion-header>
+
+  <ion-navbar color="nice">
+
+    <ion-title>添加收货地址</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!--添加界面-->
+<ion-content no-padding class="background">
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>联系人</ion-label>
+      <ion-input type="text" [(ngModel)]="receiver_name" text-end></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>手机号</ion-label>
+      <ion-input type="tel" [(ngModel)]="receiver_phone" text-end></ion-input>
+    </ion-item>
+      <ion-item>
+      <ion-label>地区</ion-label>
+      <ion-select [(ngModel)]="sheng_value" interface="popover">
+        <ion-option value="A">选择省</ion-option>
+        <ion-option *ngFor="let sheng of shengList" value="{{sheng.code}}">{{sheng.name}}</ion-option>
+      </ion-select>
+      <ion-select [(ngModel)]="city_value" interface="popover">
+        <ion-option value="A">选择市</ion-option>
+        <ion-option *ngFor="let city of cityList" value="{{city.code}}">{{city.name}}</ion-option>
+      </ion-select>
+      <ion-select [(ngModel)]="subCity_value" interface="popover">
+        <ion-option value="A">选择区县</ion-option>
+        <ion-option *ngFor="let subCity of subCityList"  value="{{subCity.code}}">{{subCity.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>地址详情</ion-label>
+      <ion-input type="text" [(ngModel)]="receiver_address_detail" text-end></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <button ion-button full clear (click)="qd()" >确定</button>
+</ion-footer>

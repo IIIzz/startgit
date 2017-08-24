@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="nice">
+    <ion-title>收货地址管理</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="shou">
+<p  *ngIf = "flag" text-center>
+  <font size="5px" color="#b0c4de">
+    暂无收货地址
+  </font>
+
+</p>
+
+<ion-list>
+  <ion-item-sliding *ngFor="let addr of addressList" >
+    <ion-item>
+      <ion-row center>
+        <ion-col (click)="modify(addr)">
+          <div>
+          <h2>
+             {{addr.receiver_address}} {{addr.receiver_address_detail}}
+             <ion-icon name="create" class="icon" class="button-right"></ion-icon>
+            <br>
+            <p>{{addr.receiver_name}} {{addr.receiver_phone}}</p>
+          </h2>
+
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ion-item>
+
+
+    <ion-item-options>
+      <button ion-button color="danger" icon-left (click)="delete(addr.id)" >
+        删除
+      </button>
+      <button ion-button color="primary" icon-left (click)="modify(addr)" >
+        修改
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+
+</ion-list>
+
+</ion-content>
+
+<ion-footer class="s">
+<button ion-button full clear (click)="address()">
+  <ion-icon name="add-circle"></ion-icon>
+  &emsp;
+  添加收货地址</button>
+</ion-footer>

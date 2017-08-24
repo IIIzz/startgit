@@ -1,0 +1,84 @@
+<!--
+  Generated template for the InfomationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="nice">
+    <ion-title *ngIf="backcard_a == ''">完善个人信息</ion-title>
+    <ion-title *ngIf="bankcard_a != '' ">更改信息</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+<ion-content no-padding class="background">
+  <ion-list>
+   <ion-item>
+      <ion-label fixed style="color:black" >真实姓名</ion-label> 
+      <ion-input type="text" placeholder="请输入真实姓名" text-end [(ngModel)]="real_name"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label fixed style="color:black" >银行卡号</ion-label> 
+      <ion-input type="tel" placeholder="请输入银行卡号" text-end [(ngModel)]="bankcard"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed style="color:black" >开户银行</ion-label>    
+      <ion-input type="text" placeholder="请输入开户银行" text-end [(ngModel)]="bankcard_name">
+      </ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label fixed style="color:black">开户银行地址</ion-label>    
+      <ion-input type="text" placeholder="请输入开户银行地址" text-end [(ngModel)]="bankcard_address"></ion-input>
+    </ion-item> 
+     <ion-item>
+      <ion-label fixed style="color:black">身份证</ion-label>    
+      <ion-input type="tel" placeholder="请输入身份证" text-end [(ngModel)]="idcard"></ion-input>
+    </ion-item> 
+     <ion-item>
+      <ion-label fixed style="color:black">验证码</ion-label>    
+      <ion-input type="tel" placeholder="请输入验证码" text-end [(ngModel)]="verify_code"></ion-input>
+      <button ion-button item-end clear style="color:blueviolet" (click)="startTime()" *ngIf="second == null">获取验证码</button>
+      <button ion-button item-end clear style="color:blueviolet" (click)="startTime()" *ngIf="second == 0">重新获取验证码</button>
+      <button ion-button item-end clear style="color:blueviolet" *ngIf="second > 0">{{second}}s后可重发</button> 
+    
+    </ion-item> 
+  </ion-list>
+  <button ion-button block round (click)="infomation('middle')" class="button_margin">确认</button>
+  <!--ion-list>
+    <ion-item>
+      
+      <ion-input type="tel" [(ngModel)]="bankcard" placeholder="银行卡号"></ion-input>
+    </ion-item>
+    <ion-item>
+      <p class="bank">银行卡号:{{bankcard}} </p>
+    </ion-item>
+    <ion-item>
+      
+      <ion-input type="text" [(ngModel)]="bankcard_name" placeholder="开户银行"></ion-input>
+    </ion-item>
+    <ion-item>
+      
+      <ion-input type="text" [(ngModel)]="bankcard_address" placeholder="开户银行地址"></ion-input>
+    </ion-item>
+
+    <ion-item>
+   <p class="bank">开户银行:{{bankcard_name}}{{bankcard_address}}</p>
+    </ion-item>
+
+    <ion-item>
+      
+      <ion-input type="tel" [(ngModel)]="idcard" placeholder="身份证"></ion-input>
+
+    </ion-item>
+    <ion-item>
+      <p class="bank">身份证:{{idcard}} </p>
+    </ion-item>
+  </ion-list-->
+</ion-content>
+
+
+
+

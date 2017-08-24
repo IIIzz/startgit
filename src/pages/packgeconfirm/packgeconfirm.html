@@ -1,0 +1,100 @@
+<ion-header style="padding: 0;margin: 0;border: 0;">
+  <ion-toolbar color="nice">
+    <ion-buttons start>
+      <!--button ion-button icon-only  (tap)="backPage()">
+        <ion-icon name="arrow-back"></ion-icon>返回
+      </button-->
+    </ion-buttons>
+    <ion-title>订单确认</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content style="background: #efeff4;">
+  <ion-card style="background: white">
+    <ion-card-header>
+      位置
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list >
+        <ion-item style="font-size: 16px;" *ngIf="sh_value == 'A01'&& find_level !=1">
+          <ion-label>自提点</ion-label>
+          <ion-select interface="popover" multiple="false" cancelText="取消" okText="确认" val [(ngModel)]='ztd_value' >
+            <ion-option value="A01" selected="true">无</ion-option>
+            <ion-option *ngFor="let shop of shopList" value="{{shop.address_code}}">{{shop.address_detail}}</ion-option>
+          </ion-select>
+        </ion-item>
+
+          <ion-item style="font-size: 16px;" *ngIf="ztd_value == 'A01'">
+            <ion-label>收货地址</ion-label>
+            <ion-select interface="popover" multiple="false" cancelText="取消" okText="确认" val [(ngModel)]='sh_value' >
+              <ion-option value="A01" selected="true">无</ion-option>
+              <ion-option *ngFor="let address of addressList"  value="{{address.id}}">{{address.receiver_address}} {{address.receiver_address_detail}}</ion-option>
+            </ion-select>
+          </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card style="background: white">
+    <ion-card-header>
+      支付方式
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list radio-group [(ngModel)]="zhifu_fangshi">
+        <ion-item>
+          <ion-label><img src="assets/img/货款参能量.jpg" style="width: 23px;float: left;margin-right: 10px;" /><font style="font-size: 16px;">现金参能量</font></ion-label>
+          <ion-radio checked="true" value="xianjin"></ion-radio>
+        </ion-item>
+        <ion-item *ngIf="find_level != 1">
+          <ion-label><img src="assets/img/现金.jpg" style="width: 23px;float: left;margin-right: 10px;"/><font style="font-size: 16px;">货款参能量</font></ion-label>
+          <ion-radio value="energy"></ion-radio>
+        </ion-item>
+        <ion-item >
+          <ion-label><img src="assets/img/学习积分.jpg" style="width: 23px;float: left;margin-right: 10px;"/><font style="font-size: 16px;">学习参能量</font></ion-label>
+          <ion-radio value="points"></ion-radio>
+        </ion-item>
+        <!--ion-item>
+          <ion-label><img src="assets/img/UnionPay.jpg" style="width: 23px;float: left;margin-right: 10px;"/><font style="font-size: 16px;">网银支付</font></ion-label>
+          <ion-radio value="bank"></ion-radio>
+        </ion-item-->
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card style="background: white">
+    <ion-card-header>
+      订单详情
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list no-lines style="border-top: 1px solid #ccc;">
+        <ion-item>
+          <ion-row center>
+            <ion-col col-9 text-wrap  style="text-align: left;font-size: 14px;">{{gifts_name}}</ion-col>
+            <ion-col text-wrap text-end style="text-align: left;font-size: 14px;">x 1</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col text-wrap *ngIf="!energy_flag" style="text-align: left;font-size: 14px;">￥ {{gifts_price}}</ion-col>
+            <ion-col text-wrap *ngIf="energy_flag"  style="text-align: left;font-size: 14px;">参能量 {{gifts_price}}</ion-col>
+          </ion-row>
+        </ion-item>
+
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer style="height: 55px;background: white;border-top: 1px solid #f1f1f1;">
+
+  <ion-row center style="padding: 0;margin: 0;border: 0;">
+    <ion-col width-33 center style="padding: 0;margin: 0;border: 0;">
+      <button ion-button color="danger" style="margin: 0;border: 0;padding: 0;width: 100%;height: 55px;" (click)="cancel()" clear>取消</button>
+    </ion-col>
+
+    <ion-col width-33 center style="padding: 0;margin: 0;border: 0;">
+      <button ion-button color="danger" style="margin: 0;border: 0;padding: 0;width: 100%;height: 55px;" (click)="submitOrder('middle')" clear>支付</button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,26 @@
+<ion-header>
+
+</ion-header>
+
+
+<ion-content padding class="ye" >
+  <div align="center" class="tu">
+  <img src="assets/img/天参密码.jpg">
+  </div>
+  <div class="top">
+    <ion-item class="login">
+      <ion-input type="tel" placeholder="请输入登录手机号" [(ngModel)]="phone"></ion-input>
+    </ion-item>
+
+    <ion-item class="login">
+      <ion-input type="password" placeholder="请输入密码" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </div>
+  <button ion-button  color="danger" block (click)="doLogin()"  round class="button" outline>登录</button>
+
+  <button ion-button color="secondary" clear  round class="login" (click)="do_scan_login()">扫码注册</button>
+  <button ion-button color="secondary" class="button-right" clear round (click)="toForgetPWD()">忘记密码</button>
+
+
+
+</ion-content>

@@ -1,0 +1,71 @@
+<!--
+  Generated template for the ParterindexPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="nice">
+    <ion-title>伙伴订货</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card">
+  <ion-grid >
+    <ion-row  *ngIf="day_flay == 0">
+      <ion-title text-center>
+        周业绩
+      </ion-title>
+    </ion-row>
+
+    <ion-row  *ngIf="day_flay == 1">
+      <ion-title text-center>
+        月业绩
+      </ion-title>
+    </ion-row>
+    <ion-card class="card" *ngIf="index_parter > 0">
+      <ion-list>
+        <ion-item *ngFor="let i of weekdayindex" >
+          <ion-row>
+            <ion-col>用户:{{i.user_nickname}} </ion-col>
+            <ion-col>电话:{{i.user_phone}}</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>订单总数量:{{i.count}}</ion-col>
+            <ion-col>业绩:{{i.total_money}}</ion-col>
+          </ion-row>
+          <div class="myxxx"></div>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+
+    <ion-card  *ngIf="pater_no_index == 0">
+      <ion-item>
+        <div align="center">
+          <font size="5px" color="#b0c4de">
+            没有记录
+          </font>
+        </div>
+      </ion-item>
+    </ion-card>
+  </ion-grid>
+</ion-content>
+
+<ion-footer class="foot">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div align="center">
+          <button ion-button clear (click)="weekday()">周业绩</button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div align="center">
+          <button ion-button clear (click)="month()">月业绩</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

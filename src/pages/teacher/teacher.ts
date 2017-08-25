@@ -8,12 +8,9 @@ import { AccountService } from "../../providers/account.service";
 import { LogInPage } from "../log-in/log-in";
 import { Storage } from '@ionic/storage';
 import {RequestParam} from "../../providers/param.before.request";
-/**
- * Generated class for the TeacherPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { BbsPage } from "./bbs/bbs";
+import { TeachGardenPage } from "./teach-garden/teach-garden";
+
 @IonicPage()
 @Component({
   selector: 'page-teacher',
@@ -108,5 +105,11 @@ phone:any;
     });
 
     toast.present(toast);
+  }
+  toBBS(){
+    this.navCtrl.push(BbsPage);
+  }
+  toTeach(){
+    this.navCtrl.push(TeachGardenPage);
   }
 }

@@ -25,13 +25,13 @@
   <ion-grid class="mm">
     <ion-row>
       <ion-title padding>
-        <div align="center"><font color="black">现金参能量</font></div>
+        <div align="center" id="xianjin">现金参能量</div>
       </ion-title>
     </ion-row>
     <ion-row>
       <ion-col>
         <div align="center">
-          <h1 class="m">{{xianjin_value}}</h1>
+          <h1 class="m xj_m">{{xianjin_value}}</h1>
         </div>
       </ion-col>
     </ion-row>
@@ -45,9 +45,9 @@
         <div align="center">
           <button ion-button color="dark" clear (click)="cz()">
             <font size="5px" color="#ff8c00">
-              <ion-icon  name="card" large  class="icon"></ion-icon>
+              <ion-icon ios="ios-card" md="ios-card"></ion-icon>
             </font>
-            充值
+           <strong> 充值</strong>
           </button>
         </div>
       </ion-col>
@@ -58,7 +58,7 @@
             <font size="5px" color="#ff8c00">
               <ion-icon  name="log-out" large  class="icon"></ion-icon>
             </font>
-            提现
+           <strong> 提现</strong>
           </button>
         </div>
       </ion-col>
@@ -88,24 +88,25 @@
       </ion-col>
     </ion-row>
       <ion-row>
-        <ion-col text-end> 
+        <ion-col text-end > 
             <button ion-button color="dark" clear (click)="czg()">
               <font size="5px" color="#ff8c00">
-                <ion-icon  name="card" large  class="icon"></ion-icon>
+                <ion-icon ios="ios-card" md="ios-card"></ion-icon>
               </font>
-              充值
+              <strong>充值</strong>
             </button>
         </ion-col> 
-        <div style='width:1px;border:1px solid red;height:20px;margin-top:20px'></div>
+        <!-- <div style='width:1px;border:1px solid red;height:20px;'></div> -->
         <ion-col text-start>   
             <button ion-button color="dark" clear (click)="zhuanru()">
               <font size="5px" color="#ff8c00">
                 <ion-icon  name="md-trending-up" large  class="icon"></ion-icon>
               </font>
-              转入
+             <strong> 转入</strong>
             </button>
         </ion-col> 
       </ion-row>
+      <div class="di"></div>
   </ion-grid>
 </ion-card>
 

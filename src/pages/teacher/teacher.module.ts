@@ -4,19 +4,25 @@ import { TeacherPage } from './teacher';
 import{PromotionPage} from'../promotion/promotion';
 import{StudyPage}from'../study/study';
 import{WechatcardPage}from'../wechatcard/wechatcard'
+import { BbsPage } from "./bbs/bbs";
+import { TeachGardenPage } from "./teach-garden/teach-garden";
 
 @NgModule({
   declarations: [
     TeacherPage,
     PromotionPage,
     StudyPage,
-    WechatcardPage
+    WechatcardPage,
+    BbsPage,
+    TeachGardenPage,
   ],
    entryComponents: [
      TeacherPage,
       PromotionPage,
       StudyPage,
-      WechatcardPage
+      WechatcardPage,
+      BbsPage,
+      TeachGardenPage,
     ],
   imports: [
     IonicPageModule.forChild(TeacherPage),

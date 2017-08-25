@@ -14,7 +14,8 @@ page-packs {
   .item {
     border: grey 1px;
     width:50%;
-    display:inline-block;
+ //   display:inline-block;
+    float: left;
   }
   .title{
     margin: 5px;

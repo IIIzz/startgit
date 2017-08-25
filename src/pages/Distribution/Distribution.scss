@@ -1,8 +1,9 @@
+ 
  .wdzh{
    background: white;
  }
  .z{
-   background: whitesmoke;
+   background: #eee;
    margin-top: -5px;
 
  }
@@ -64,11 +65,11 @@
 }
 .fxfx{
   background: white;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .qt{
   background: white;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .info{
 margin-top: -20px;
@@ -84,7 +85,7 @@ margin-top: -20px;
 }
 .cztx{
   margin-top: -50px;
-  background: white;
+  background: #eee;
   //height: 120px;
 }
 .c{
@@ -102,5 +103,62 @@ margin-top: -20px;
   background: white;
 }
 #float_style{
-  border-radius: 10px;
+  border-radius: 20px;
+}
+.name{
+
+  font-size: 23px;
+  color: white;
+  
+}
+.avatar_name{
+  display: inline-block;
+}
+.name{
+  color: white;
+  font-size: 23px;
+  margin-top: 30px;
+}
+.whole{
+  display: flex;
+
+}
+.setting{
+  width: 100%;
+  margin-top:10px;
+  padding-right: 15px;
+  margin-bottom: -10px;
+  text-align: right;
+}
+.xian{
+  width:1px;
+  border:1.8px solid red;
+  border-radius: 100px;
+  height:20px;
+  margin-top:3px;
+  margin-left:3px;
+}
+.xian1{
+  width:1px;
+  border:1.8px solid #9F79EE;
+  border-radius: 100px;
+  height:20px;
+  margin-top:3px;
+  margin-left:3px;
+}
+.xian2{
+  width:1px;
+  border:1.8px solid #90EE90;
+  border-radius: 100px;
+  height:20px;
+  margin-top:3px;
+  margin-left:3px;
+}
+.xian3{
+  width:1px;
+  border:1.8px solid #6B8E23;
+  border-radius: 100px;
+  height:20px;
+  margin-top:3px;
+  margin-left:3px;
 }

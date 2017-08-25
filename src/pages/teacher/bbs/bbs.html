@@ -1,0 +1,33 @@
+
+<ion-header>
+  <ion-navbar color="nice">
+    <ion-title>专题论坛</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  
+  <ion-fab right bottom>
+    <button ion-fab color="secondary" (click)="addTopic()"><ion-icon name="create"></ion-icon></button>
+  </ion-fab>
+  <ion-list class="list-avatar-page">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/2.jpg">
+      </ion-avatar>
+      <h3>帖子标题</h3>
+      <p><span></span> &nbsp;&nbsp; 发帖人姓名</p>
+      <ion-note item-end><h3>发帖时间</h3></ion-note>
+    </ion-item>
+    <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/1.jpg">
+        </ion-avatar>
+        <h3>帖子标题</h3>
+        <p><span></span> &nbsp;&nbsp; 发帖人姓名</p>
+        <ion-note item-end><h3>发帖时间</h3></ion-note>
+      </ion-item>
+  </ion-list>
+</ion-content>

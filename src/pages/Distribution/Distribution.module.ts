@@ -26,6 +26,7 @@ import {ShopshipPage} from "../shopship/shopship";
 import {WaitshipPage} from "../waitship/waitship";
 import {SendshipPage} from "../sendship/sendship";
 import { ZhuanruGhkPage } from "../zhuanru-ghk/zhuanru-ghk";
+import { SystemFeedbackPage } from "./system-feedback/system-feedback";
 @NgModule({
   declarations: [
     WalletPage,   //tab : mine
@@ -57,7 +58,8 @@ import { ZhuanruGhkPage } from "../zhuanru-ghk/zhuanru-ghk";
     EvaluationPage,
     ShopshipPage,
     WaitshipPage,
-    SendshipPage
+    SendshipPage,
+    SystemFeedbackPage,
 
   ],
   entryComponents: [
@@ -85,7 +87,8 @@ import { ZhuanruGhkPage } from "../zhuanru-ghk/zhuanru-ghk";
    ModifyPhonePage,
    ShopshipPage,
    WaitshipPage,
-   SendshipPage
+   SendshipPage,
+   SystemFeedbackPage,
   ],
 
   imports: [

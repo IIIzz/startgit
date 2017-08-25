@@ -14,12 +14,12 @@ page-user-wallet {
     margin-left: 30px;
   }
     .money{
-      background:white ;
+      background:#eee ;
       margin-top: 0px;
     }
     .mm{
       margin-top: 0px;
-      background: red;
+      background: #ff7f50;
       height: 180px;
     }
     .zc{
@@ -38,7 +38,12 @@ page-user-wallet {
     }
     .m{
       color: black;
+      font-weight: bold;
+      margin-top: -10px;
     }
+        .xj_m{
+          color: white;
+        }
     .did{
       border: 0.05px solid lightgrey;
     }
@@ -57,7 +62,7 @@ page-user-wallet {
   
     }
     .gg{
-      background: white;
+      background: #eee;
      // margin-top: -40px;
   
     }
@@ -69,7 +74,7 @@ page-user-wallet {
     }
     .cztx{
       margin-top: -50px;
-      background: white;
+      background: #eee;
     }
     .icon{
       margin-right: 10px;
@@ -88,7 +93,12 @@ page-user-wallet {
     }
     #float_style{
    //   border-style: ridge;
-      border-radius: 15px;
+      border-radius: 10px;
+    }
+    #xianjin{
+      font-weight: bold;
+      color: white;
+      margin-top: 20px;
     }
   }
   

@@ -6,7 +6,6 @@ import {OrderPage} from "../../../order/order";
 import { AlertController,ViewController  } from 'ionic-angular';
 import { InAppBrowser , InAppBrowserOptions } from '@ionic-native/in-app-browser';
 import {ShopCartPage}from "../shop-cart/shop-cart"
-import { ShoppingPage } from "../shopping";
 import { Storage } from '@ionic/storage';
 import {TabsPage} from "../../../tabs/tabs";
 
@@ -263,6 +262,15 @@ export class ConfirmOrderPage implements DoCheck {
                 this.alert_which_go();
           }
         }else if(this.sendorder.result == 'err'){
+          if(this.sendorder.flag == '1'){
+            let alert = this.alertCtrl.create({
+              title:'提示',
+              subTitle:'请先完善个人信息',
+              buttons:['好'],
+             });
+           alert.present();
+           return;
+          }
           if(this.zhifu_fangshi == 'xianjin'){
             if(this.sendorder.message == '现金账户余额不足'){
               let alert = this.alertCtrl.create({

@@ -80,7 +80,7 @@ resultDisplayDuration:0
 		  let re = /user/gi;
 		  let new_url = barcodeData.text.replace(re,'user_scan');
           let ref = this.theInAppBrowser.create(new_url,'_blank',this.options);
-	  let p1 = ref.on("loadstart").subscribe(
+	    ref.on("loadstart").subscribe(
            (event)=>{
 //            console.log('returned_url:'+JSON.stringify(event.url));
              if(event.url == 'http://localhost:8087/exit'){

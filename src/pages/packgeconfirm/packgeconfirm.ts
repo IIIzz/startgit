@@ -268,6 +268,15 @@ export class PackgeconfirmPage implements DoCheck{
                 this.alert_which_go();
           }
         }else if(this.sendorder.result == 'err'){
+          if(this.sendorder.flag == '1'){
+            let alert = this.alertCtrl.create({
+              title:'提示',
+              subTitle:'请先完善个人信息',
+              buttons:['好'],
+             });
+           alert.present();
+           return;
+          }
           if(this.zhifu_fangshi == 'xianjin'){
             if(this.sendorder.message == '现金账户余额不足'){
               let alert = this.alertCtrl.create({

@@ -75,7 +75,7 @@
                 <button ion-button outline small color="danger" round (click)="zhifu_dingdan(shop.order_id)"><font size="0.1px">支付订单</font></button>
               </ion-col>
             </ion-row>
-            <ion-row text-wrap *ngIf="xiangqing_flag" >
+            <ion-row text-wrap *ngIf="xiangqing_flag">
                 <ion-col text-end text-wrap style="text-align: left;font-size: 14px;" *ngIf="shop.receiver_type == 1 && shop.order_id == order_id" ><font size="1px">收货人 {{shop.order_receiver.receiver_name}} 联系电话 {{shop.user_phone}} </font></ion-col>
                 <ion-col text-end text-wrap style="text-align: left;font-size: 14px;" *ngIf="shop.receiver_type == 0 && shop.order_id == order_id" ><font size="1px">收货人 {{shop.order_receiver.receiver_name}} 联系电话 {{shop.user_phone}} </font></ion-col>
             </ion-row>
@@ -126,7 +126,7 @@
                 <button ion-button outline small round *ngIf="shop.receiver_type == 0" (click)="xiangqing(shop.order_id)">收货详情</button>
               </ion-col>
             </ion-row>
-            <ion-row text-wrap *ngIf="xiangqing_flag" >
+            <ion-row text-wrap *ngIf="xiangqing_flag">
                 <ion-col text-end text-wrap style="text-align: left;font-size: 14px;" *ngIf="shop.receiver_type == 1 && shop.order_id == order_id" ><font size="1px">收货人 {{shop.order_receiver.receiver_name}} 联系电话 {{shop.user_phone}} </font></ion-col>
                 <ion-col text-end text-wrap style="text-align: left;font-size: 14px;" *ngIf="shop.receiver_type == 0 && shop.order_id == order_id" ><font size="1px">收货人 {{shop.order_receiver.receiver_name}} 联系电话 {{shop.user_phone}} </font></ion-col>
             </ion-row>

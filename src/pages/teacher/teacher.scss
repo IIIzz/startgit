@@ -1,53 +1,58 @@
-
-.xs{
-background: lightgray;
-  margin-top: 5px;
-}
-  .zt{
-background: skyblue;
-    margin-top: 5px;
+page-teacher{
+  .content{
+    background: #eee;
   }
-  .px{
-    background: skyblue;
-    margin-top: 5px;
+  .theme{
+    margin-left: 10px;
+    color: #808080;
   }
-.find{
- background: lightgray;
-  //background-image: url('../../assets/img/雪山.jpg');;
-}
-.er{
-//  background: blue;
-  margin-right: -10px;
-}
-.wx{
-  //background: pink;
-}
-ion-col div{
-
-}
-.myxxx{
-  border: 0.05px solid whitesmoke;
-}
-.yq{
-  //background: white;
-}
-.ss{
-  height: 150px;
- // width: 550px;
-  //background-image: url('../../assets/img/雪山.jpg');;
-}
-.dhd{
-  //margin-top:50px;
-}
-.studys{
-  background: whitesmoke;
-}
-.spss{
-  margin-left: -10px;
-}
-.hui{
-  background: whitesmoke;
-}
-.yanse{
-  background: white;
+  .item{
+    border: 2px grey;
+    margin: 0.5%;
+    background: white;
+    width:49%;
+    height: 100px;
+    float: left;
+    p{
+      color:#696969;
+      padding-left: 10px; 
+      font-size: 12px; 
+    }
+  }
+  .title{
+    padding-top: 20px;
+    padding-left: 10px; 
+    color: red;
+    font-size: 20px;
+  }
+  #icon1{
+    float: right;
+    margin-right: 20px;
+    font-size: 40px;
+    color: #4169e1;
+  }
+  #icon2{
+    float: right;
+    margin-right: 20px;
+    font-size: 40px;
+    color: #2e8b57; 
+  }
+  #icon3{
+    float: right;
+    margin-right: 20px;
+    font-size: 40px;
+    color: #ff8c00; 
+  }
+  #icon4{
+    float: right;
+    margin-right: 20px;
+    font-size: 40px;
+    color: #5f9ea0; 
+  }
+  #icon5{
+    float: right;
+    margin-right: 20px;
+    font-size: 40px;
+    color: #cd5c5c; 
+  }
 }

@@ -1,0 +1,46 @@
+
+<ion-header>
+
+  <ion-navbar color="nice">
+    <ion-title>学习园地</ion-title>
+  </ion-navbar>
+  <!-- <div class="head-tab">
+      <ul class="tab-content">
+        <li class="tab-item"><span class="cur-cf-tab">全部</span></li>
+        <li class="tab-item"><span>培训通知</span></li>
+        <li class="tab-item"><span>讲师风采</span></li>
+        <li class="tab-item"><span>分享交流</span></li>
+        <li class="tab-item"><span>工具教程</span></li>
+      </ul>
+    </div> -->
+   
+</ion-header>
+
+
+<ion-content class="content">
+    <ion-toolbar no-border-top  >
+        <ion-segment [(ngModel)]="segmentModel" >
+          <ion-segment-button value="0" >
+            <span class="tab-item">
+                全部 </span>
+          </ion-segment-button>
+          <ion-segment-button value="1">
+            <span class="tab-item">
+                培训通知 </span>
+          </ion-segment-button>
+          <ion-segment-button value="2">
+            <span class="tab-item">
+                讲师风采</span>
+          </ion-segment-button>
+          <ion-segment-button value="3">
+            <span class="tab-item">
+              分享交流</span>
+            </ion-segment-button>
+    
+          <ion-segment-button value="4">
+            <span class="tab-item">
+                工具教程</span>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+</ion-content>

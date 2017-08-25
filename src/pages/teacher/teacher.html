@@ -6,10 +6,64 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="hui">
-<!--ion-grid no-padding>
-  <img src="assets/img/桔黄色背景图片.jpg">
-</ion-grid-->
+<ion-content class="content">
+  <div class="theme">
+    <p>学习中心</p>
+  </div>
+  <!-- <div class="item" (click)="toTeach()"> -->
+  <div class="item" (click)="qidai('middle')">
+    <div class="title">
+      学习园地
+      <span id="icon1">
+        <ion-icon ios="ios-school" md="md-school"></ion-icon>
+      </span>
+    </div>
+    <p>公司教程 专题学习</p>
+  </div>
+  <div class="item" (click)="qidai('middle')">
+    <div class="title">
+      我要投稿
+      <span id="icon2">
+          <ion-icon ios="ios-mail-open" md="ios-mail-outline"></ion-icon>
+        </span>
+    </div>
+    <p>畅所欲言 展现风采</p>
+  </div>
+  <!-- <div class="item" (click)="toBBS()"> -->
+   <div class="item" (click)="qidai('middle')"> 
+    <div class="title">
+      专题论坛
+      <span id="icon3">
+          <ion-icon ios="ios-contacts" md="md-contacts"></ion-icon>
+        </span> 
+    </div>
+    <p>精英交流 广结朋友</p>
+  </div>
+  <ion-grid no-padding no-margin>
+  <div class="theme">
+      <p>推广中心</p>
+    </div>
+  </ion-grid>
+  <div class="item" (click)="promotion()">
+      <div class="title">
+        推广自己
+        <span id="icon4">
+            <ion-icon ios="ios-magnet" md="ios-magnet-outline"></ion-icon>
+        </span>
+      </div>
+      <p>有效推广 全面发展</p>
+    </div> 
+    <div class="item">
+        <div class="title" (click)="qidai('middle')">
+          我的建议
+          <span id="icon5">
+              <ion-icon ios="ios-megaphone" md="ios-megaphone"></ion-icon>
+            </span>
+        </div>
+        <p>用心建议 认真倾听</p>
+      </div>
+</ion-content>
+<!-- <ion-content class="hui">
     <ion-grid class="yanse">
       <ion-row class="studys">
         <ion-item no-lines><font size="3px" color="#d3d3d3">学习中心</font> </ion-item>
@@ -93,7 +147,7 @@
 
         <ion-col >
           <ion-grid>
-            <ion-row (click)="qidai('middle')">
+            <ion-row (click)="toBBS()">
               <ion-col col-5>
                 <div align="center">
                   <font size="5px" color="#90ee90">
@@ -131,88 +185,4 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-
-
-
-  <!--<ion-card class="tk" >-->
-    <!--<ion-grid no-padding >-->
-      <!--<ion-row>-->
-        <!--<img src="assets/img/天空.jpg">-->
-      <!--</ion-row>-->
-    <!--</ion-grid>-->
-  <!--</ion-card>-->
-  <!---->
-  <!--<div class="myxxx"></div>-->
-  <!--<ion-card>-->
-    <!--<ion-grid class="dhd">-->
-      <!--<ion-row >-->
-        <!--&lt;!&ndash;ion-col>  <ion-title ><font size="3" color="#00ffff">专题讨论</font> </ion-title>-->
-        <!--</ion-col&ndash;&gt;-->
-      <!--</ion-row>-->
-      <!--<div class="myxxx"></div>-->
-
-
-      <!--<ion-row>-->
-        <!--<ion-col (click)="study()">-->
-          <!--<div align="center" >-->
-            <!--<font size="5px" color="#00ffff">-->
-              <!--<ion-icon name="paper" large></ion-icon>-->
-            <!--</font>-->
-            <!--<p class="wddd">学习园地</p>-->
-          <!--</div>-->
-        <!--</ion-col>-->
-
-        <!--<ion-col >-->
-          <!--<div align="center">-->
-            <!--<font size="5px" color="#d3d3d3">-->
-              <!--<ion-icon name="clipboard" large></ion-icon>-->
-            <!--</font>-->
-            <!--<p class="wddd">专题论坛</p>-->
-          <!--</div>-->
-        <!--</ion-col>-->
-        <!--<div class="myxxx"></div>-->
-        <!--<ion-col >-->
-          <!--<div align="center">-->
-            <!--<font size="5px" color="#d3d3d3">-->
-              <!--<ion-icon name="create" large></ion-icon>-->
-            <!--</font>-->
-            <!--<p class="wdzj">专题学习</p>-->
-          <!--</div>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-      <!--<div class="myxxx"></div>-->
-      <!--<ion-row>-->
-        <!--<ion-col >-->
-          <!--<div align="center">-->
-            <!--<font size="5px" color="#d3d3d3">-->
-              <!--<ion-icon name="send" large></ion-icon>-->
-            <!--</font>-->
-            <!--<p class="wdsc">我要投稿</p>-->
-          <!--</div>-->
-        <!--</ion-col>-->
-        <!--<div class="myxxx"></div>-->
-        <!--<ion-col >-->
-          <!--<div align="center">-->
-            <!--<font size="5px" color="#d3d3d3">-->
-              <!--<ion-icon name="color-wand"large></ion-icon>-->
-            <!--</font>-->
-            <!--<p class="shdz">我的建议</p>-->
-          <!--</div>-->
-        <!--</ion-col>-->
-        <!--<div class="myxxx"></div>-->
-        <!--<ion-col (click)="promotion()" >-->
-          <!--<div align="center">-->
-            <!--<font size="5px" color="#87ceeb">-->
-              <!--<ion-icon name="briefcase"  large></ion-icon>-->
-            <!--</font>-->
-            <!--<p class="shdz">推广自己</p>-->
-          <!--</div>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-    <!--</ion-grid>-->
-  <!--</ion-card>-->
-
-
-
-</ion-content>
+</ion-content> -->

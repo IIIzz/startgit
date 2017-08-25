@@ -21,8 +21,25 @@
   </ion-refresher>
 
   <ion-grid no-padding>
-  <ion-grid class="colorcolor" >
-    <ion-row>
+  
+    <div class="colorcolor" >
+    <div class="setting" (click)="setting()">
+            <font size="4px">    <ion-icon name="ios-settings-outline" class="set" Default></ion-icon></font>
+            <font color="white" size="3px">
+              设置
+            </font>
+    </div>
+    <div (click)="toPersonInfo()" class="whole">
+      <div style="margin-top: 17px;margin-left:20px;" class="avatar_name">
+      <ion-icon name="person" class="button-right" style="font-size: 40px;" *ngIf="!base64Image"></ion-icon>
+      <img [src]="base64Image" *ngIf="base64Image" class="button-right tp" style="font-size: 40px;" /> 
+    </div>
+    <div class="avatar_name name"> 
+      &nbsp;&nbsp;&nbsp;{{nick_name}}
+      </div>
+    </div>
+   
+    <!-- <ion-row>
     <ion-col col-6 (click)="toPersonInfo()"  >
       <ion-icon name="person" class="button-right" style="font-size: 40px;" *ngIf="!base64Image"></ion-icon>
       <img [src]="base64Image" *ngIf="base64Image" class="button-right tp" style="font-size: 40px;" />
@@ -34,8 +51,8 @@
           设置
         </font>
       </ion-col>
-    </ion-row>
-  </ion-grid>
+    </ion-row> -->
+  </div>
   </ion-grid>
 
   <!--ion-grid class="owncolor">
@@ -45,20 +62,20 @@
       <ion-card class="c" id="float_style">
         <ion-row class="s">
           <ion-col (click)="orderindex()">
-            <div align="center">
-            <font size="3.5px" color="#d3d3d3">历史订货</font>
+            <div align="center" style="padding-top:10px;">
+            <font size="3.5px" color="#2e8b57">历史订货</font>
             </div>
           </ion-col>
 
           <ion-col (click)="paterindex()">
-            <div align="center">
-              <font size="3.5px" color="#d3d3d3">伙伴订货</font>
+            <div align="center" style="padding-top:10px;">
+              <font size="3.5px" color="#2e8b57">伙伴订货</font>
             </div>
           </ion-col>
 
           <ion-col (click)="allindex()">
-            <div align="center">
-              <font size="3.5px" color="#d3d3d3">历史总订单</font>
+            <div align="center" style="padding-top:10px;">
+              <font size="3.5px" color="#2e8b57">历史总订单</font>
             </div>
           </ion-col>
         </ion-row>
@@ -88,7 +105,8 @@
   <ion-grid >
 <ion-grid class="wdzh">
   <ion-row>
-    <ion-title><font size="3" color="aqua">我的账户</font> </ion-title>
+    <div class="xian"></div>
+    <ion-title style="margin-top:3px;"><font size="3" color="aqua">我的账户</font> </ion-title>
   </ion-row>
 
     <ion-row >
@@ -160,7 +178,8 @@
 
     <ion-grid class="fxfx" *ngIf="user_role_level != 0 ">
       <ion-row>
-        <ion-title><font size="3" color="#00ffff">分销管理</font> </ion-title>
+        <div class="xian1"></div>
+        <ion-title style="margin-top:3px;"><font size="3" color="#00ffff">分销管理</font> </ion-title>
       </ion-row>
 
     <ion-row>
@@ -186,8 +205,8 @@
 
     <ion-grid class="dhd">
       <ion-row >
-        <ion-col>  <ion-title ><font size="3" color="#00ffff">订货管理</font> </ion-title>
-        </ion-col>
+        <div class="xian2"></div>
+          <ion-title style="margin-top:3px;"><font size="3" color="#00ffff">订货管理</font> </ion-title>
       </ion-row>
 
       <ion-row>
@@ -232,11 +251,13 @@
 
     <ion-grid class="qt">
       <ion-row>
-        <ion-title><font size="3" color="#00ffff">其他</font> </ion-title>
+        <div class="xian3"></div>
+        <ion-title style="margin-top:3px;"><font size="3" color="#00ffff">其他</font> </ion-title>
       </ion-row>
 
     <ion-row>
-      <ion-col (click)="qidai('middle')">
+      <!-- <ion-col (click)="qidai('middle')"> -->
+      <ion-col (click)="toSystemFeedback()">
         <div align="center">
           <font size="5px" color="#90ee90">
             <ion-icon  name="infinite" large ></ion-icon>

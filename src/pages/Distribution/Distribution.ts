@@ -22,6 +22,7 @@ import { LogInPage } from "../log-in/log-in";
 import {ShopshipPage} from "../shopship/shopship";
 import {SendshipPage} from "../sendship/sendship";
 import {WaitshipPage} from "../waitship/waitship";
+import { SystemFeedbackPage } from "./system-feedback/system-feedback";
 
 
 
@@ -291,6 +292,9 @@ ziti(){
 
   yibuhuo(){
 this.Walletpage.push(SendshipPage);
+  }
+  toSystemFeedback(){
+    this.Walletpage.push(SystemFeedbackPage);
   }
 }
 

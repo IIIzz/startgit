@@ -3,16 +3,24 @@ page-tixian {
     background: whitesmoke;
 }
  .button-right{
-    float:right;
+   float: right;
+    margin-right: 10%;
   }
   .button-left{
-    float:left;
+    float: left;
+    margin-left: 10%;
   }
   .margin_top{
     margin-top: 30px;
   }
   .button_margin{
-    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 25px;
+    margin-left: 10%;
+    width: 80%;
+    border-radius: 5px;
   }
   .tip{
     background: #FFE4B5;

@@ -21,7 +21,7 @@
   </ion-refresher>
 
   <ion-grid no-padding>
-  
+
     <div class="colorcolor" >
     <div class="setting" (click)="setting()">
             <font size="4px">    <ion-icon name="ios-settings-outline" class="set" Default></ion-icon></font>
@@ -32,13 +32,13 @@
     <div (click)="toPersonInfo()" class="whole">
       <div style="margin-top: 17px;margin-left:20px;" class="avatar_name">
       <ion-icon name="person" class="button-right" style="font-size: 40px;" *ngIf="!base64Image"></ion-icon>
-      <img [src]="base64Image" *ngIf="base64Image" class="button-right tp" style="font-size: 40px;" /> 
+      <img [src]="base64Image" *ngIf="base64Image" class="button-right tp" style="font-size: 40px;" />
     </div>
-    <div class="avatar_name name"> 
+    <div class="avatar_name name">
       &nbsp;&nbsp;&nbsp;{{nick_name}}
       </div>
     </div>
-   
+
     <!-- <ion-row>
     <ion-col col-6 (click)="toPersonInfo()"  >
       <ion-icon name="person" class="button-right" style="font-size: 40px;" *ngIf="!base64Image"></ion-icon>
@@ -142,6 +142,7 @@
 
     <ion-grid class="qt" *ngIf="role==1">
       <ion-row>
+        <div class="xiandian"></div>
         <ion-title><font size="3" color="#00ffff">店铺发货</font> </ion-title>
       </ion-row>
 

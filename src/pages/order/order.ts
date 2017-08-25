@@ -5,6 +5,7 @@ import {RequestParam} from '../../providers/param.before.request'
 import { InAppBrowser , InAppBrowserOptions } from '@ionic-native/in-app-browser';
 import {TabsPage} from "../tabs/tabs";
 import {EvaluationPage} from "../evaluation/evaluation";
+import { OrderDetailPage } from "../order-detail/order-detail";
 
 @Component({
   selector: 'page-order',
@@ -184,6 +185,7 @@ export class OrderPage implements DoCheck{
           if(status == 4){
             if(this.order_status_check.result == 'ok'){
               this.daipingjiaList = this.order_status_check.data;
+              //reverse把数据倒序排列
               this.daipingjiaList.reverse();
             }
           }
@@ -320,6 +322,12 @@ export class OrderPage implements DoCheck{
     console.log('hello xiangqing'+this.xiangqing_flag);
     this.xiangqing_flag = !this.xiangqing_flag;
     this.order_id = order_id;
-    
+
+  }
+  toOrderDetail(shop:any){
+    console.log('order_detail:'+JSON.stringify(shop));
+    this.navCtrl.push(OrderDetailPage,{
+      order_detail:shop
+    });
   }
 }
